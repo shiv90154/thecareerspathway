@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import SeoHead from "@/components/SeoHead";
 import Hero from "@/components/Hero";
 import JobCard from "@/components/JobCard";
@@ -12,7 +13,7 @@ import {
 } from "react-icons/hi2";
 
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Best HPAS & HAS Coaching in Shimla | The Career Pathway (CPS)",
   description: "Top-rated HPAS, HAS & Government Exam Coaching Institute in Shimla. Get study material, job alerts, e-learning, e-books, and expert guidance for HPAS 2025 preparation.",
   keywords: "HPAS coaching, HAS coaching, Shimla coaching, government exams, HPAS 2025, HAS 2025, study material, job alerts, CPS Shimla",
@@ -107,14 +108,13 @@ export default function HomePage() {
         title="Best HPAS & HAS Coaching in Shimla | The Career Pathway (CPS)"
         description="Top-rated HPAS, HAS & Government Exam Coaching Institute in Shimla. Get study material, job alerts, e-learning, e-books, and expert guidance for HPAS 2025 preparation."
         canonical="https://www.thecareerspathway.com/"
-        keywords="HPAS coaching Shimla, HAS coaching, government exams, HPAS 2025, study material, job alerts, CPS coaching"
       />
 
       {/* HERO SECTION */}
       <Hero />
 
       {/* FEATURES SECTION */}
-      <section className="relative py-20 bg-gradient-to-br from-blue-50 to-gray-50">
+      <section className="relative py-20 bg-linear-to-br from-blue-50 to-gray-50">
         <div className="absolute inset-0 bg-white/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
@@ -129,7 +129,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const Icon = feature.icon;
-              const colorClasses = {
+              const colorClasses: Record<string, string> = {
                 blue: "text-blue-600 bg-blue-100",
                 green: "text-green-600 bg-green-100",
                 purple: "text-purple-600 bg-purple-100",
@@ -167,20 +167,20 @@ export default function HomePage() {
                 Premier Coaching for <span className="text-blue-600">HPAS & HAS</span> Exams
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                <strong>The Career Pathway (CPS)</strong> is Himachal Pradesh's most trusted coaching institute 
+                <strong>The Career Pathway (CPS)</strong> is Himachal Pradesh&apos;s most trusted coaching institute 
                 for <strong>HPAS, HAS, Allied Services & other government examinations</strong>. With a legacy 
                 of excellence, we empower aspirants to achieve their dream careers.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 Our comprehensive approach includes <strong>updated study material, daily job alerts, 
-                modern e-learning modules, expert faculty guidance, and complete exam preparation</strong> 
+                modern e&apos;learning modules, expert faculty guidance, and complete exam preparation</strong> 
                 strategies tailored for success.
               </p>
               
               <div className="flex flex-wrap gap-4">
                 <Link 
                   href="/e-enrollment" 
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-blue-300 transition-all duration-300 transform hover:scale-105"
+                  className="bg-linear-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-blue-300 transition-all duration-300 transform hover:scale-105"
                 >
                   Enroll Now
                 </Link>
@@ -194,7 +194,7 @@ export default function HomePage() {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-8 text-white">
+              <div className="bg-linear-to-br from-blue-500 to-blue-700 rounded-3xl p-8 text-white">
                 <div className="grid grid-cols-2 gap-6">
                   {stats.map((stat, index) => (
                     <div key={index} className="text-center">
@@ -228,7 +228,7 @@ export default function HomePage() {
       </section>
 
       {/* LATEST JOB ALERTS */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -274,7 +274,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-20 bg-linear-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Start Your <span className="text-yellow-300">Government Career</span>?

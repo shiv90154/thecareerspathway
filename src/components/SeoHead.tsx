@@ -2,10 +2,12 @@ export default function SeoHead({
   title,
   description,
   canonical,
+  keywords,
 }: {
   title: string;
   description: string;
   canonical: string;
+  keywords?: string;
 }) {
   return (
     <>
@@ -14,6 +16,9 @@ export default function SeoHead({
 
       {/* Meta Description */}
       <meta name="description" content={description} />
+
+      {/* Meta Keywords (optional) */}
+      {keywords && <meta name="keywords" content={keywords} />}
 
       {/* Canonical */}
       <link rel="canonical" href={canonical} />
