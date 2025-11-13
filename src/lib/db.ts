@@ -8,7 +8,8 @@ export default async function dbConnect() {
   const MONGODB_URI = process.env.MONGODB_URI;
 
   if (!MONGODB_URI) {
-    throw new Error("❌ Missing MONGODB_URI in .env.local");
+    console.warn("⚠ MONGODB_URI is not configured - skipping database connection");
+    return;
   }
 
   try {
