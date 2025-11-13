@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* PURE CSS INPUT STYLE */
+.input {
+  width: 100%;
+  padding: 12px;            /* p-3 = approx 12px */
+  border-radius: 0.5rem;    /* rounded-lg */
+  border: 1px solid rgba(128, 128, 128, 0.4);  /* border-gray/40 */
+  outline: none;
+  background: white;
+  box-sizing: border-box;   /* Safety */
+}
+.input:focus {
+  border-color: #4A90E2;    /* Focus border color */
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3); /* Focus shadow */
+}
