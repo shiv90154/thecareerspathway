@@ -1,4 +1,8 @@
 import Link from "next/link";
+import dbConnect from "@/lib/db";
+import JobAlert from "@/models/JobAlert";
+
+export const dynamic = "force-dynamic";
 
 async function getAlerts() {
   const res = await fetch("http://localhost:3000/api/admin/job-alerts", {
@@ -10,7 +14,7 @@ async function getAlerts() {
   return res.json();
 }
 
-export default async function JobAlertsPage() {
+export default async function AdminJobAlertsPage() {
   const { alerts } = await getAlerts();
 
   return (

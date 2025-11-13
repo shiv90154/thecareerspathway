@@ -1,13 +1,14 @@
-// src/app/admin/dashboard/page.tsx
 import { redirect } from "next/navigation";
 import dbConnect from "@/lib/db";
 import JobAlert from "@/models/JobAlert";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Admin Dashboard | CPS",
 };
 
-export default async function AdminDashboardPage() {
+export default async function DashboardPage() {
   // 🔐 Check Admin Authentication
   const isAdmin =
     process.env.NEXT_PUBLIC_ADMIN_EMAIL &&

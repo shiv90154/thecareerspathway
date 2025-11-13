@@ -1,6 +1,8 @@
 import dbConnect from "@/lib/db";
 import Ebook from "@/models/Ebook";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminEbooksPage() {
   await dbConnect();
   const ebooks = await Ebook.find().sort({ createdAt: -1 });

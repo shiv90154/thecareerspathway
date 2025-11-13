@@ -1,6 +1,8 @@
 import dbConnect from "@/lib/db";
 import StudyMaterial from "@/models/StudyMaterial";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminStudyMaterialPage() {
   await dbConnect();
   const materials = await StudyMaterial.find().sort({ createdAt: -1 });
