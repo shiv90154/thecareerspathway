@@ -1,15 +1,15 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI as string;
-
-if (!MONGODB_URI) {
-  throw new Error("❌ Missing MONGODB_URI in .env.local");
-}
-
 let isConnected = false;
 
 export default async function dbConnect() {
   if (isConnected) return;
+
+  const MONGODB_URI = process.env.MONGODB_URI;
+
+  if (!MONGODB_URI) {
+    throw new Error("❌ Missing MONGODB_URI in .env.local");
+  }
 
   try {
     const db = await mongoose.connect(MONGODB_URI);
