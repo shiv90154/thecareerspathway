@@ -42,7 +42,7 @@ const faculty = [
   {
     name: "Dr. Rajesh Sharma",
     role: "Founder & Chief Mentor",
-    image: "/images/faculty/director.jpg",
+    image: "/images/faculty/director.avif",
     experience: "15+ Years",
     specialization: "HPAS Strategy & Mentoring",
     qualifications: "PhD in Public Administration, Former Administrative Officer",
@@ -52,7 +52,7 @@ const faculty = [
   {
     name: "Prof. Anjali Verma",
     role: "Senior Faculty - HAS/HPAS",
-    image: "/images/faculty/senior-faculty.jpg",
+    image: "/images/faculty/director.avif",
     experience: "12+ Years",
     specialization: "General Studies & Essay Writing",
     qualifications: "Masters in Political Science, UGC NET Qualified",
@@ -62,7 +62,7 @@ const faculty = [
   {
     name: "Mr. Vikram Thakur",
     role: "HP GK & History Expert",
-    image: "/images/faculty/hp-gk-expert.jpg",
+    image: "/images/faculty/director.avif",
     experience: "10+ Years",
     specialization: "Himachal Pradesh Specific Subjects",
     qualifications: "Masters in History, HPAS Consultant",
@@ -118,7 +118,7 @@ export default function ManagementPage() {
             Meet Our <span className="text-yellow-300">Expert Team</span>
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Learn from Himachal Pradesh's most experienced faculty team dedicated to 
+            Learn from Himachal Pradesh most experienced faculty team dedicated to 
             your success in HPAS, HAS, and government examinations
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -177,17 +177,25 @@ export default function ManagementPage() {
                 className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden group"
               >
                 {/* Faculty Image */}
-                <div className="relative h-80 bg-linear-to-br from-blue-500 to-blue-700 overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-transparent p-6">
-                    <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
-                    <p className="text-blue-200 font-medium">{member.role}</p>
-                  </div>
-                  {/* Experience Badge */}
-                  <div className="absolute top-4 right-4 bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-sm font-bold">
-                    {member.experience}
-                  </div>
-                </div>
+              <div className="relative h-80 overflow-hidden">
+  <Image 
+    src={member.image}
+    alt={member.name}
+    fill
+    className="object-cover"
+  />
+  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+  
+  <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-transparent p-6">
+    <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
+    <p className="text-blue-200 font-medium">{member.role}</p>
+  </div>
+
+  <div className="absolute top-4 right-4 bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-sm font-bold">
+    {member.experience}
+  </div>
+</div>
+
 
                 {/* Faculty Details */}
                 <div className="p-6">

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import SeoHead from "@/components/SeoHead";
 import Hero from "@/components/Hero";
 import JobCard from "@/components/JobCard";
@@ -9,7 +10,9 @@ import {
   HiCloudArrowDown,
   HiBellAlert, 
   HiCheckBadge, 
-  HiUserGroup 
+  HiUserGroup,
+  HiChevronLeft,
+  HiChevronRight
 } from "react-icons/hi2";
 
 
@@ -101,6 +104,134 @@ const stats = [
   { number: "24/7", label: "Support" }
 ];
 
+// Banner slider images data
+const bannerImages = [
+  {
+    src: "/images/banner/banner1.jpeg",
+    alt: "HPAS 2025 Coaching - The Career Pathway",
+    title: "HPAS 2025 Foundation Course",
+    subtitle: "Start your journey to become an HPAS officer",
+    ctaText: "Enroll Now",
+    ctaLink: "/hpas-foundation"
+  },
+  {
+    src: "/images/banner/banner2.jpeg",
+    alt: "HAS Exam Preparation - CPS Shimla",
+    title: "HAS Preliminary 2025",
+    subtitle: "Comprehensive preparation for HAS prelims",
+    ctaText: "Learn More",
+    ctaLink: "/has-prelims"
+  },
+  {
+    src: "/images/banner/banner3.jpeg",
+    alt: "Study Material - The Career Pathway",
+    title: "Updated Study Material",
+    subtitle: "Get the latest books and resources",
+    ctaText: "Browse Materials",
+    ctaLink: "/study-material"
+  },
+  {
+    src: "/images/banner/banner4.jpeg",
+    alt: "E-Learning Platform - CPS",
+    title: "Digital Learning Platform",
+    subtitle: "Learn anytime, anywhere with our e-learning",
+    ctaText: "Explore Courses",
+    ctaLink: "/e-learning"
+  },
+  {
+    src: "/images/banner/banner5.jpeg",
+    alt: "Success Stories - The Career Pathway",
+    title: "Our Success Stories",
+    subtitle: "Join our community of successful aspirants",
+    ctaText: "View Results",
+    ctaLink: "/results"
+  },
+  {
+    src: "/images/banner/banner6.jpeg",
+    alt: "Free Workshop - CPS Shimla",
+    title: "Free Demo Classes",
+    subtitle: "Experience our teaching methodology",
+    ctaText: "Register Now",
+    ctaLink: "/demo-class"
+  }
+];
+
+// Banner Slider Component
+function BannerSlider() {
+  return (
+    <section className="relative py-16 bg-linear-to-r from-blue-600 to-blue-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Featured <span className="text-yellow-300">Programs</span>
+          </h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            Discover our comprehensive coaching programs designed for your success
+          </p>
+        </div>
+
+        {/* Slider Container */}
+        <div className="relative">
+          <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-6 pb-8">
+            {bannerImages.map((banner, index) => (
+              <div
+                key={index}
+                className="shrink-0 w-full md:w-2/3 lg:w-1/2 snap-center"
+              >
+                <div className="aspect-w-16 aspect-h-9 h-64 md:h-80 relative">
+                  <Image
+                    src={banner.src}
+                    alt={banner.alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                      {banner.title}
+                    </h3>
+                    <p className="text-blue-100 text-lg mb-4">
+                      {banner.subtitle}
+                    </p>
+                    <Link
+                      href={banner.ctaLink}
+                      className="inline-flex items-center bg-yellow-400 text-blue-900 px-6 py-3 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105"
+                    >
+                      {banner.ctaText}
+                      <HiChevronRight className="ml-2 w-5 h-5" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {bannerImages.map((_, index) => (
+              <div
+                key={index}
+                className="w-3 h-3 bg-white/30 rounded-full transition-all duration-300 hover:bg-white/50 cursor-pointer"
+              ></div>
+            ))}
+          </div>
+        </div>
+
+        {/* Navigation arrows for larger screens */}
+        <div className="hidden lg:flex justify-between items-center absolute top-1/2 left-0 right-0 transform -translate-y-1/2 -mt-8 px-4">
+          <button className="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300">
+            <HiChevronLeft className="w-6 h-6" />
+          </button>
+          <button className="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300">
+            <HiChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -112,6 +243,9 @@ export default function HomePage() {
 
       {/* HERO SECTION */}
       <Hero />
+
+      {/* BANNER SLIDER SECTION */}
+      <BannerSlider />
 
       {/* FEATURES SECTION */}
       <section className="relative py-20 bg-linear-to-br from-blue-50 to-gray-50">

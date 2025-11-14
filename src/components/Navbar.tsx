@@ -76,20 +76,33 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
 
-          {/* LOGO */}
+          {/* LOGO + TEXT */}
           <Link href="/" className="flex items-center space-x-3">
+            {/* LOGO */}
             <div className="relative w-12 h-12">
               <Image
-                src="/logo.png"
+                src="/logo2.png"
                 alt="CPS Logo"
                 width={48}
                 height={48}
                 className="object-contain rounded-lg"
               />
             </div>
+
+            {/* DESKTOP TEXT */}
             <div className="hidden sm:block">
               <div className="text-xl font-bold text-blue-700">Career Point</div>
               <div className="text-xs text-gray-500">Education Hub</div>
+            </div>
+
+            {/* ⭐ MOBILE TEXT (ADDED) */}
+            <div className="block sm:hidden text-left leading-tight">
+              <div className="text-sm font-bold text-blue-700">
+               Careers Pathway Shimla
+              </div>
+              <div className="text-[10px] text-gray-500 -mt-0.5">
+                HPAS / HAS Coaching
+              </div>
             </div>
           </Link>
 
@@ -145,7 +158,7 @@ export default function Navbar() {
         <div className="h-3"></div>
       </div>
 
-      {/* BOTTOM SPACE FOR SAFE AREA */}
+      {/* SAFE AREA SPACING FOR MOBILE */}
       <div className="lg:hidden pb-20"></div>
     </>
   );

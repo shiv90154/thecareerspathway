@@ -8,7 +8,7 @@ import {
   HiShieldCheck,
   HiDevicePhoneMobile,   // FIXED
   HiClock,
-  HiCheckCircle,
+ 
   HiShoppingCart
 } from "react-icons/hi2";
 
@@ -463,7 +463,7 @@ export default function EBooksPage() {
                 <FaWhatsapp className="w-8 h-8 text-green-600" />
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-4">Contact via WhatsApp</h4>
-              <p className="text-gray-600">Click "Buy on WhatsApp" and send your book requirements</p>
+              <p className="text-gray-600">Click Buy on WhatsApp and send your book requirements</p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg text-center">

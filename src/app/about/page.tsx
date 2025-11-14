@@ -1,5 +1,5 @@
 import SeoHead from "@/components/SeoHead";
-import Image from "next/image";
+
 import { Metadata } from "next";
 import Link from "next/link";
 import { 
@@ -94,50 +94,103 @@ export default function AboutPage() {
         // REMOVED: keywords prop since SeoHead component doesn't accept it
       />
 
-      {/* HERO SECTION */}
-      <section className="relative py-20 bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                About <span className="text-yellow-300">The Career Pathway</span>
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Himachal Pradesh's Premier Coaching Institute for <strong>HPAS, HAS, Allied Services</strong> 
-                and other government examinations. Empowering aspirants since 2018.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link 
-                  href="/e-enrollment" 
-                  className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-yellow-200 transition-all duration-300 transform hover:scale-105"
+   <section 
+  aria-labelledby="about-heading"
+  className="relative py-20 text-white overflow-hidden"
+>
+  {/* Background Image with Gradient Overlay */}
+  <div 
+    className="absolute inset-0 bg-linear-to-br from-blue-600/90 via-blue-700/90 to-blue-800/90" 
+    style={{
+      backgroundImage: "url('/images/download.jpeg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat"
+    }}
+    role="img"
+    aria-label="Students attending career guidance session at The Career Pathway Institute"
+  >
+  </div>
+  
+  {/* Additional Overlay for better text readability */}
+  <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
+  
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Main Content - Better Semantic Structure */}
+      <header className="space-y-6">
+        <h1 
+          id="about-heading"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+        >
+          About <span className="text-yellow-300">The Career Pathway</span>
+        </h1>
+        
+        <p className="text-xl text-blue-100 leading-relaxed">
+          <strong>Himachal Pradesh Premier Coaching Institute</strong> for 
+          <strong> HPAS, HAS, Allied Services</strong> and other government examinations. 
+          Empowering aspirants since 2018 with comprehensive preparation strategies.
+        </p>
+
+        {/* Call to Action Buttons */}
+        <nav className="flex flex-wrap gap-4" aria-label="Main navigation">
+          <Link 
+            href="/e-enrollment" 
+            className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-yellow-200 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-50"
+            aria-label="Join Career Pathway Services today for government exam preparation"
+          >
+            Join CPS Today
+          </Link>
+          <Link 
+            href="/contact" 
+            className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
+            aria-label="Contact The Career Pathway Institute"
+          >
+            Contact Us
+          </Link>
+        </nav>
+      </header>
+
+      {/* Achievements Section */}
+      <aside 
+        className="relative"
+        aria-labelledby="achievements-heading"
+      >
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <h2 
+            id="achievements-heading"
+            className="text-2xl font-bold mb-6 text-center"
+          >
+            Our Achievements
+          </h2>
+          <div className="grid grid-cols-2 gap-6">
+            {stats.map((stat, index) => (
+              <div 
+                key={index} 
+                className="text-center"
+                itemScope
+                itemType="https://schema.org/QuantitativeValue"
+              >
+                <div 
+                  className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2"
+                  itemProp="value"
                 >
-                  Join CPS Today
-                </Link>
-                <Link 
-                  href="/contact" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+                  {stat.number}
+                </div>
+                <div 
+                  className="text-blue-100 font-medium"
+                  itemProp="name"
                 >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold mb-6 text-center">Our Achievements</h3>
-                <div className="grid grid-cols-2 gap-6">
-                  {stats.map((stat, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">{stat.number}</div>
-                      <div className="text-blue-100 font-medium">{stat.label}</div>
-                    </div>
-                  ))}
+                  {stat.label}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
+      </aside>
+    </div>
+  </div>
+</section>
 
       {/* ABOUT CONTENT SECTION */}
       <section className="py-20 bg-white">
@@ -164,7 +217,7 @@ export default function AboutPage() {
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   At CPS, we combine traditional teaching excellence with modern technological tools 
-                  to create a comprehensive learning environment that adapts to each student's unique needs.
+                  to create a comprehensive learning environment that adapts to each students unique needs.
                 </p>
               </div>
             </div>
