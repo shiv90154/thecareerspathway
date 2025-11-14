@@ -115,7 +115,7 @@ export default async function JobAlertsPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-[#0A2342] mb-4">No Job Alerts Available</h3>
                 <p className="text-[#1E3A5F] max-w-md mx-auto">
-                  We're currently updating our job alerts. Please check back later for the latest government job notifications.
+                  Were currently updating our job alerts. Please check back later for the latest government job notifications.
                 </p>
               </div>
             )}
