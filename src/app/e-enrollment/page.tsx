@@ -122,22 +122,22 @@ export default function EEnrollmentForm() {
       />
 
       {/* HERO SECTION */}
-      <section className="relative py-20 bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <section className="relative py-20 bg-linear-to-br from-[#0A2342] via-[#1E3A5F] to-[#0A2342] text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Online <span className="text-yellow-300">Enrollment</span>
+                Online <span className="text-[#FFD600]">Enrollment</span>
               </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl text-[#F5F5F5] mb-8 leading-relaxed">
                 Join The Career Pathway (CPS) for premier HPAS, HAS, and government exam coaching. 
                 Enroll online in just 5 minutes and start your journey towards a successful career.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
                   href="#enrollment-form"
-                  className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-yellow-200 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#FFD600] text-[#0A2342] px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-[#FFD600]/30 transition-all duration-300 transform hover:scale-105"
                 >
                   Enroll Now
                 </a>
@@ -154,20 +154,20 @@ export default function EEnrollmentForm() {
                 <h3 className="text-2xl font-bold mb-6 text-center">Why Choose CPS?</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <HiAcademicCap className="w-6 h-6 text-yellow-300" />
-                    <span className="text-blue-100">Expert HPAS/HAS Faculty</span>
+                    <HiAcademicCap className="w-6 h-6 text-[#FFD600]" />
+                    <span className="text-[#F5F5F5]">Expert HPAS/HAS Faculty</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <HiUserGroup className="w-6 h-6 text-yellow-300" />
-                    <span className="text-blue-100">1000+ Successful Students</span>
+                    <HiUserGroup className="w-6 h-6 text-[#FFD600]" />
+                    <span className="text-[#F5F5F5]">1000+ Successful Students</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <HiShieldCheck className="w-6 h-6 text-yellow-300" />
-                    <span className="text-blue-100">Proven Results & Selections</span>
+                    <HiShieldCheck className="w-6 h-6 text-[#FFD600]" />
+                    <span className="text-[#F5F5F5]">Proven Results & Selections</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <HiBookOpen className="w-6 h-6 text-yellow-300" />
-                    <span className="text-blue-100">Comprehensive Study Material</span>
+                    <HiBookOpen className="w-6 h-6 text-[#FFD600]" />
+                    <span className="text-[#F5F5F5]">Comprehensive Study Material</span>
                   </div>
                 </div>
               </div>
@@ -180,10 +180,10 @@ export default function EEnrollmentForm() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Choose Your <span className="text-blue-600">Course</span>
+            <h2 className="text-4xl font-bold text-[#0A2342] mb-4">
+              Choose Your <span className="text-[#1E3A5F]">Course</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1E3A5F] max-w-3xl mx-auto">
               Select from our range of comprehensive coaching programs designed for HPAS, HAS, and government exams
             </p>
           </div>
@@ -193,29 +193,29 @@ export default function EEnrollmentForm() {
               <div 
                 key={course.id}
                 className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
-                  course.popular ? 'border-yellow-400 border-2' : 'border-gray-100'
+                  course.popular ? 'border-[#FFD600] border-2' : 'border-[#F5F5F5]'
                 } overflow-hidden group cursor-pointer`}
                 onClick={() => setSelectedCourse(course.id)}
               >
                 {course.popular && (
-                  <div className="bg-yellow-400 text-blue-900 px-4 py-3 text-center font-bold">
+                  <div className="bg-[#FFD600] text-[#0A2342] px-4 py-3 text-center font-bold">
                     ⭐ MOST POPULAR
                   </div>
                 )}
                 
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
+                  <h3 className="text-2xl font-bold text-[#0A2342] mb-4 leading-tight">
                     {course.name}
                   </h3>
                   
                   <div className="mb-4">
-                    <span className="text-sm text-gray-500">Duration: {course.duration}</span>
+                    <span className="text-sm text-[#1E3A5F]">Duration: {course.duration}</span>
                   </div>
 
                   <div className="space-y-2 mb-6">
                     {course.features.map((feature, index) => (
-                      <div key={index} className="flex items-center text-gray-600">
-                        <HiCheckCircle className="w-5 h-5 text-green-500 mr-2 shrink-0" />
+                      <div key={index} className="flex items-center text-[#1E3A5F]">
+                        <HiCheckCircle className="w-5 h-5 text-[#D62828] mr-2 shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}
@@ -223,8 +223,8 @@ export default function EEnrollmentForm() {
 
                   <div className="mb-4">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-2xl font-bold text-gray-900">{course.price}</span>
-                      <span className="text-lg text-gray-500 line-through">{course.originalPrice}</span>
+                      <span className="text-2xl font-bold text-[#0A2342]">{course.price}</span>
+                      <span className="text-lg text-[#1E3A5F] line-through">{course.originalPrice}</span>
                     </div>
                   </div>
 
@@ -232,8 +232,8 @@ export default function EEnrollmentForm() {
                     onClick={() => setSelectedCourse(course.id)}
                     className={`w-full py-3 rounded-xl font-semibold text-lg transition-all duration-300 ${
                       selectedCourse === course.id
-                        ? 'bg-green-600 text-white shadow-lg transform scale-105'
-                        : 'bg-blue-600 text-white hover:bg-blue-700'
+                        ? 'bg-[#D62828] text-white shadow-lg transform scale-105'
+                        : 'bg-[#0A2342] text-white hover:bg-[#1E3A5F]'
                     }`}
                   >
                     {selectedCourse === course.id ? 'Selected ✓' : 'Select Course'}
@@ -246,28 +246,28 @@ export default function EEnrollmentForm() {
       </section>
 
       {/* ENROLLMENT FORM */}
-      <section id="enrollment-form" className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
+      <section id="enrollment-form" className="py-20 bg-linear-to-br from-[#F5F5F5] to-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Form */}
-            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-[#F5F5F5]">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                <h2 className="text-3xl font-bold text-[#0A2342] mb-2">
                   Enrollment Form
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-[#1E3A5F]">
                   Fill this form to join CPS. Our team will contact you within 24 hours.
                 </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                     Full Name *
                   </label>
                   <input 
                     name="name" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300"
                     placeholder="Enter your full name"
                     required 
                   />
@@ -275,25 +275,25 @@ export default function EEnrollmentForm() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                       Email Address *
                     </label>
                     <input
                       name="email"
                       type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                      className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300"
                       placeholder="your.email@example.com"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                       Phone Number *
                     </label>
                     <input
                       name="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                      className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300"
                       placeholder="+91 XXXXX XXXXX"
                       required
                     />
@@ -301,12 +301,12 @@ export default function EEnrollmentForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                     Select Course *
                   </label>
                   <select 
                     name="course" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300"
                     value={selectedCourse}
                     onChange={(e) => setSelectedCourse(e.target.value)}
                     required
@@ -322,12 +322,12 @@ export default function EEnrollmentForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                     Message (Optional)
                   </label>
                   <textarea
                     name="message"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300"
                     placeholder="Any specific requirements or questions..."
                     rows={4}
                   ></textarea>
@@ -336,7 +336,7 @@ export default function EEnrollmentForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-linear-to-r from-blue-600 to-blue-700 text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-blue-300 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full bg-linear-to-r from-[#0A2342] to-[#1E3A5F] text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-[#0A2342]/30 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {loading ? (
                     <span className="flex items-center justify-center">
@@ -354,7 +354,7 @@ export default function EEnrollmentForm() {
                 {msg && (
                   <div className={`p-4 rounded-xl text-center font-semibold text-lg ${
                     msg.includes("❌") 
-                      ? "bg-red-100 text-red-700 border border-red-200" 
+                      ? "bg-[#D62828]/10 text-[#D62828] border border-[#D62828]/20" 
                       : "bg-green-100 text-green-700 border border-green-200"
                   }`}>
                     {msg}
@@ -365,19 +365,19 @@ export default function EEnrollmentForm() {
 
             {/* Benefits Sidebar */}
             <div className="space-y-8">
-              <div className="bg-white rounded-3xl shadow-lg p-8 border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Enrollment Benefits</h3>
+              <div className="bg-white rounded-3xl shadow-lg p-8 border border-[#F5F5F5]">
+                <h3 className="text-2xl font-bold text-[#0A2342] mb-6">Enrollment Benefits</h3>
                 <div className="space-y-6">
                   {benefits.map((benefit, index) => {
                     const Icon = benefit.icon;
                     return (
                       <div key={index} className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0">
-                          <Icon className="w-6 h-6 text-blue-600" />
+                        <div className="w-12 h-12 bg-[#1E3A5F]/10 rounded-xl flex items-center justify-center shrink-0">
+                          <Icon className="w-6 h-6 text-[#0A2342]" />
                         </div>
                         <div>
-                          <h4 className="text-lg font-semibold text-gray-900 mb-1">{benefit.title}</h4>
-                          <p className="text-gray-600">{benefit.description}</p>
+                          <h4 className="text-lg font-semibold text-[#0A2342] mb-1">{benefit.title}</h4>
+                          <p className="text-[#1E3A5F]">{benefit.description}</p>
                         </div>
                       </div>
                     );
@@ -386,26 +386,26 @@ export default function EEnrollmentForm() {
               </div>
 
               {/* Contact Info */}
-              <div className="bg-linear-to-br from-blue-600 to-blue-700 rounded-3xl p-8 text-white">
+              <div className="bg-linear-to-br from-[#0A2342] to-[#1E3A5F] rounded-3xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-6 text-center">Need Help?</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <HiPhone className="w-5 h-5 text-yellow-300" />
+                    <HiPhone className="w-5 h-5 text-[#FFD600]" />
                     <span>Call Admissions: Available 9 AM - 7 PM</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <HiEnvelope className="w-5 h-5 text-yellow-300" />
+                    <HiEnvelope className="w-5 h-5 text-[#FFD600]" />
                     <span>Email: admissions@thecareerspathway.com</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <HiMapPin className="w-5 h-5 text-yellow-300" />
+                    <HiMapPin className="w-5 h-5 text-[#FFD600]" />
                     <span>Visit: CPS Center, Shimla</span>
                   </div>
                 </div>
                 <div className="mt-6 text-center">
                   <Link 
                     href="/contact" 
-                    className="inline-block bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300"
+                    className="inline-block bg-white text-[#0A2342] px-6 py-3 rounded-xl font-semibold hover:bg-[#F5F5F5] transition-colors duration-300"
                   >
                     Contact Us Directly
                   </Link>
@@ -419,35 +419,35 @@ export default function EEnrollmentForm() {
       {/* ASSURANCE SECTION */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <HiShieldCheck className="w-16 h-16 text-blue-600 mx-auto mb-6" />
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Your Enrollment is <span className="text-blue-600">100% Secure</span>
+          <HiShieldCheck className="w-16 h-16 text-[#0A2342] mx-auto mb-6" />
+          <h2 className="text-4xl font-bold text-[#0A2342] mb-6">
+            Your Enrollment is <span className="text-[#1E3A5F]">100% Secure</span>
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-[#1E3A5F] mb-8 max-w-2xl mx-auto leading-relaxed">
             We protect your personal information and ensure a smooth enrollment process. 
             Your data is safe with us and will only be used for admission purposes.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <HiCheckCircle className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-[#1E3A5F]/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <HiCheckCircle className="w-6 h-6 text-[#0A2342]" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">Data Protection</h4>
-              <p className="text-gray-600 text-sm">Your information is encrypted and secure</p>
+              <h4 className="font-bold text-[#0A2342] mb-2">Data Protection</h4>
+              <p className="text-[#1E3A5F] text-sm">Your information is encrypted and secure</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <HiCheckCircle className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-[#1E3A5F]/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <HiCheckCircle className="w-6 h-6 text-[#0A2342]" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">No Spam</h4>
-              <p className="text-gray-600 text-sm">We respect your privacy and communication preferences</p>
+              <h4 className="font-bold text-[#0A2342] mb-2">No Spam</h4>
+              <p className="text-[#1E3A5F] text-sm">We respect your privacy and communication preferences</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <HiCheckCircle className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-[#1E3A5F]/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <HiCheckCircle className="w-6 h-6 text-[#0A2342]" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">Instant Support</h4>
-              <p className="text-gray-600 text-sm">Quick resolution of any enrollment issues</p>
+              <h4 className="font-bold text-[#0A2342] mb-2">Instant Support</h4>
+              <p className="text-[#1E3A5F] text-sm">Quick resolution of any enrollment issues</p>
             </div>
           </div>
         </div>

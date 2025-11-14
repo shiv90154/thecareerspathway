@@ -70,8 +70,8 @@ export default function Navbar() {
       <nav
         className={`fixed w-full top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-lg shadow-md border-b border-gray-200"
-            : "bg-white border-b border-gray-200"
+            ? "bg-[#FFFFFF]/90 backdrop-blur-lg shadow-md border-b border-[#F5F5F5]"
+            : "bg-[#FFFFFF] border-b border-[#F5F5F5]"
         }`}
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
@@ -91,16 +91,16 @@ export default function Navbar() {
 
             {/* DESKTOP TEXT */}
             <div className="hidden sm:block">
-              <div className="text-xl font-bold text-blue-700">Career Point</div>
-              <div className="text-xs text-gray-500">Education Hub</div>
+              <div className="text-xl font-bold text-[#0A2342]">Career Point</div>
+              <div className="text-xs text-[#1E3A5F]">Education Hub</div>
             </div>
 
-            {/* ⭐ MOBILE TEXT (ADDED) */}
+            {/* MOBILE TEXT */}
             <div className="block sm:hidden text-left leading-tight">
-              <div className="text-sm font-bold text-blue-700">
+              <div className="text-sm font-bold text-[#0A2342]">
                Careers Pathway Shimla
               </div>
-              <div className="text-[10px] text-gray-500 -mt-0.5">
+              <div className="text-[10px] text-[#1E3A5F] -mt-0.5">
                 HPAS / HAS Coaching
               </div>
             </div>
@@ -114,8 +114,8 @@ export default function Navbar() {
                 href={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   pathname === link.path
-                    ? "text-blue-700 bg-blue-100"
-                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+                    ? "text-[#FFFFFF] bg-[#0A2342]"
+                    : "text-[#1E3A5F] hover:text-[#0A2342] hover:bg-[#F5F5F5]"
                 }`}
               >
                 {link.name}
@@ -126,7 +126,7 @@ export default function Navbar() {
       </nav>
 
       {/* BOTTOM NAVIGATION (MOBILE) */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-t border-gray-200 shadow-xl">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#FFFFFF]/95 backdrop-blur-lg border-t border-[#F5F5F5] shadow-xl">
         <div className="flex justify-around items-center px-2 py-2">
 
           {bottomNavItems.map((item) => {
@@ -140,15 +140,15 @@ export default function Navbar() {
                 onClick={() => setActiveBottomNav(item.name)}
                 className={`relative flex flex-col items-center justify-center w-12 py-1 rounded-xl transition-all ${
                   isActive
-                    ? "text-blue-700 bg-blue-50 scale-105"
-                    : "text-gray-600 hover:text-blue-600"
+                    ? "text-[#FFFFFF] bg-[#0A2342] scale-105"
+                    : "text-[#1E3A5F] hover:text-[#0A2342]"
                 }`}
               >
                 <Icon className="text-lg mb-0.5" />
                 <span className="text-[8px] font-medium">{item.name}</span>
 
                 {isActive && (
-                  <div className="absolute -top-1 w-1 h-1 bg-blue-600 rounded-full"></div>
+                  <div className="absolute -top-1 w-1 h-1 bg-[#FFD600] rounded-full"></div>
                 )}
               </Link>
             );

@@ -2,16 +2,15 @@ import SeoHead from "@/components/SeoHead";
 import Link from "next/link";
 import { 
   HiBookOpen, 
-  HiCloudArrowDown,   // FIXED
+  HiCloudArrowDown,
   HiAcademicCap, 
   HiDocumentText,
   HiMap,
   HiCurrencyRupee,
-  HiGlobeAlt,         // FIXED
+  HiGlobeAlt,
   HiCalendar,
   HiStar,
   HiShieldCheck,
-  
 } from "react-icons/hi2";
 
 export const metadata = {
@@ -147,26 +146,25 @@ export default function StudyMaterialPage() {
         title="HPAS HAS Study Material & Notes | The Career Pathway (CPS) Shimla"
         description="Download premium HPAS, HAS, Allied Services study material & Himachal GK notes. Expert-prepared PDFs, current affairs, and exam-focused content by CPS faculty."
         canonical="https://www.thecareerspathway.com/study-material"
-        keywords="HPAS study material, HAS notes, Himachal GK PDF, civil services study material, HPAS prelims notes"
       />
 
       {/* HERO SECTION */}
-      <section className="relative py-20 bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <section className="relative py-20 bg-linear-to-br from-[#0A2342] via-[#1E3A5F] to-[#0A2342] text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Premium <span className="text-yellow-300">Study Material</span>
+                Premium <span className="text-[#FFD600]">Study Material</span>
               </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl text-[#F5F5F5] mb-8 leading-relaxed">
                 Download expertly crafted HPAS, HAS, and Allied Services study materials. 
                 Updated notes, Himachal GK, current affairs, and comprehensive PDFs for your exam preparation.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
                   href="#materials"
-                  className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-yellow-200 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#FFD600] text-[#0A2342] px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-[#FFD600]/30 transition-all duration-300 transform hover:scale-105"
                 >
                   Download Materials
                 </a>
@@ -183,20 +181,20 @@ export default function StudyMaterialPage() {
                 <h3 className="text-2xl font-bold mb-6 text-center">Material Highlights</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-100">Total Materials</span>
-                    <span className="text-yellow-300 font-bold">20+ PDFs</span>
+                    <span className="text-[#F5F5F5]">Total Materials</span>
+                    <span className="text-[#FFD600] font-bold">20+ PDFs</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-100">Pages Count</span>
-                    <span className="text-yellow-300 font-bold">2000+ Pages</span>
+                    <span className="text-[#F5F5F5]">Pages Count</span>
+                    <span className="text-[#FFD600] font-bold">2000+ Pages</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-100">Last Updated</span>
-                    <span className="text-yellow-300 font-bold">February 2025</span>
+                    <span className="text-[#F5F5F5]">Last Updated</span>
+                    <span className="text-[#FFD600] font-bold">February 2025</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-100">New Materials</span>
-                    <span className="text-yellow-300 font-bold">Monthly</span>
+                    <span className="text-[#F5F5F5]">New Materials</span>
+                    <span className="text-[#FFD600] font-bold">Monthly</span>
                   </div>
                 </div>
               </div>
@@ -209,10 +207,10 @@ export default function StudyMaterialPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose <span className="text-blue-600">CPS Study Material</span>?
+            <h2 className="text-4xl font-bold text-[#0A2342] mb-4">
+              Why Choose <span className="text-[#1E3A5F]">CPS Study Material</span>?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1E3A5F] max-w-3xl mx-auto">
               Our materials are specifically designed for HPAS, HAS, and Himachal Pradesh government exams
             </p>
           </div>
@@ -225,11 +223,11 @@ export default function StudyMaterialPage() {
                   key={index}
                   className="text-center group hover:transform hover:-translate-y-2 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors duration-300">
-                    <Icon className="w-8 h-8 text-blue-600" />
+                  <div className="w-16 h-16 bg-[#1E3A5F]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#1E3A5F]/20 transition-colors duration-300">
+                    <Icon className="w-8 h-8 text-[#0A2342]" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-[#0A2342] mb-3">{feature.title}</h3>
+                  <p className="text-[#1E3A5F] leading-relaxed">{feature.description}</p>
                 </div>
               );
             })}
@@ -238,13 +236,13 @@ export default function StudyMaterialPage() {
       </section>
 
       {/* STUDY MATERIALS GRID */}
-      <section id="materials" className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
+      <section id="materials" className="py-20 bg-linear-to-br from-[#F5F5F5] to-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Download <span className="text-blue-600">Study Materials</span>
+            <h2 className="text-4xl font-bold text-[#0A2342] mb-4">
+              Download <span className="text-[#1E3A5F]">Study Materials</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1E3A5F] max-w-3xl mx-auto">
               Comprehensive, updated, and exam-focused study materials for HPAS, HAS, and government exams
             </p>
           </div>
@@ -256,34 +254,34 @@ export default function StudyMaterialPage() {
                 <div 
                   key={index}
                   className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
-                    material.featured ? 'border-yellow-400 border-2' : 'border-gray-100'
+                    material.featured ? 'border-[#FFD600] border-2' : 'border-[#F5F5F5]'
                   } group overflow-hidden`}
                 >
                   {material.featured && (
-                    <div className="bg-yellow-400 text-blue-900 px-4 py-2 text-sm font-bold text-center">
+                    <div className="bg-[#FFD600] text-[#0A2342] px-4 py-2 text-sm font-bold text-center">
                       ⭐ FEATURED MATERIAL
                     </div>
                   )}
                   
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-300">
-                        <Icon className="w-6 h-6 text-blue-600" />
+                      <div className="w-12 h-12 bg-[#1E3A5F]/10 rounded-xl flex items-center justify-center group-hover:bg-[#1E3A5F]/20 transition-colors duration-300">
+                        <Icon className="w-6 h-6 text-[#0A2342]" />
                       </div>
                       {material.featured && (
-                        <HiStar className="w-6 h-6 text-yellow-400" />
+                        <HiStar className="w-6 h-6 text-[#FFD600]" />
                       )}
                     </div>
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                    <h3 className="text-xl font-bold text-[#0A2342] mb-3 leading-tight">
                       {material.title}
                     </h3>
                     
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="text-[#1E3A5F] mb-6 leading-relaxed">
                       {material.desc}
                     </p>
 
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center justify-between text-sm text-[#1E3A5F] mb-4">
                       <span className="flex items-center">
                         <HiDocumentText className="w-4 h-4 mr-1" />
                         {material.pages}
@@ -299,8 +297,8 @@ export default function StudyMaterialPage() {
                         material.level === 'Prelims + Mains' 
                           ? 'bg-green-100 text-green-800'
                           : material.level === 'Mains'
-                          ? 'bg-blue-100 text-blue-800'
-                          : 'bg-purple-100 text-purple-800'
+                          ? 'bg-[#1E3A5F]/10 text-[#1E3A5F]'
+                          : 'bg-[#FFD600]/20 text-[#0A2342]'
                       }`}>
                         {material.level}
                       </span>
@@ -310,7 +308,7 @@ export default function StudyMaterialPage() {
                       href={material.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-linear-to-r from-blue-600 to-blue-700 text-white py-3 rounded-xl font-semibold flex items-center justify-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
+                      className="w-full bg-linear-to-r from-[#0A2342] to-[#1E3A5F] text-white py-3 rounded-xl font-semibold flex items-center justify-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
                     >
                       <HiCloudArrowDown className="w-5 h-5 mr-2" />
                       Download PDF
@@ -328,73 +326,73 @@ export default function StudyMaterialPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+              <div className="inline-block px-4 py-2 bg-[#1E3A5F]/10 text-[#0A2342] rounded-full text-sm font-semibold mb-4">
                 Why Our Materials?
               </div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Designed for <span className="text-blue-600">HPAS & HAS Success</span>
+              <h2 className="text-4xl font-bold text-[#0A2342] mb-6">
+                Designed for <span className="text-[#1E3A5F]">HPAS & HAS Success</span>
               </h2>
               <div className="space-y-6">
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-[#1E3A5F] leading-relaxed">
                   Every PDF and study material at <strong>The Career Pathway</strong> is meticulously 
                   designed by subject experts with a focus on the latest exam patterns, HPAS/HAS syllabus 
                   requirements, and Himachal-specific content.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-[#1E3A5F] leading-relaxed">
                   Our materials incorporate <strong>previous year questions, conceptual clarity, 
                   current affairs integration, and answer writing frameworks</strong> that have 
                   proven successful for hundreds of CPS students.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="flex items-center">
-                    <HiStar className="w-5 h-5 text-green-500 mr-2" />
-                    <span className="text-gray-700">Updated Content</span>
+                    <HiStar className="w-5 h-5 text-[#D62828] mr-2" />
+                    <span className="text-[#1E3A5F]">Updated Content</span>
                   </div>
                   <div className="flex items-center">
-                    <HiStar className="w-5 h-5 text-green-500 mr-2" />
-                    <span className="text-gray-700">Exam Focused</span>
+                    <HiStar className="w-5 h-5 text-[#D62828] mr-2" />
+                    <span className="text-[#1E3A5F]">Exam Focused</span>
                   </div>
                   <div className="flex items-center">
-                    <HiStar className="w-5 h-5 text-green-500 mr-2" />
-                    <span className="text-gray-700">HP Specific Content</span>
+                    <HiStar className="w-5 h-5 text-[#D62828] mr-2" />
+                    <span className="text-[#1E3A5F]">HP Specific Content</span>
                   </div>
                   <div className="flex items-center">
-                    <HiStar className="w-5 h-5 text-green-500 mr-2" />
-                    <span className="text-gray-700">Expert Reviewed</span>
+                    <HiStar className="w-5 h-5 text-[#D62828] mr-2" />
+                    <span className="text-[#1E3A5F]">Expert Reviewed</span>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-linear-to-br from-blue-500 to-blue-700 rounded-3xl p-8 text-white">
+            <div className="bg-linear-to-br from-[#0A2342] to-[#1E3A5F] rounded-3xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-6 text-center">Material Benefits</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <HiBookOpen className="w-6 h-6 text-yellow-300 mt-1 shrink-0" />
+                  <HiBookOpen className="w-6 h-6 text-[#FFD600] mt-1 shrink-0" />
                   <div>
                     <h4 className="font-bold mb-1">Comprehensive Coverage</h4>
-                    <p className="text-blue-100 text-sm">Complete syllabus with no topic left behind</p>
+                    <p className="text-[#F5F5F5] text-sm">Complete syllabus with no topic left behind</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <HiCalendar className="w-6 h-6 text-yellow-300 mt-1 shrink-0" />
+                  <HiCalendar className="w-6 h-6 text-[#FFD600] mt-1 shrink-0" />
                   <div>
                     <h4 className="font-bold mb-1">Monthly Updates</h4>
-                    <p className="text-blue-100 text-sm">Regular content updates with current affairs</p>
+                    <p className="text-[#F5F5F5] text-sm">Regular content updates with current affairs</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <HiShieldCheck className="w-6 h-6 text-yellow-300 mt-1 shrink-0" />
+                  <HiShieldCheck className="w-6 h-6 text-[#FFD600] mt-1 shrink-0" />
                   <div>
                     <h4 className="font-bold mb-1">Quality Assured</h4>
-                    <p className="text-blue-100 text-sm">Reviewed by experienced HPAS/HAS faculty</p>
+                    <p className="text-[#F5F5F5] text-sm">Reviewed by experienced HPAS/HAS faculty</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <HiAcademicCap className="w-6 h-6 text-yellow-300 mt-1 shrink-0" />
+                  <HiAcademicCap className="w-6 h-6 text-[#FFD600] mt-1 shrink-0" />
                   <div>
                     <h4 className="font-bold mb-1">Exam Ready</h4>
-                    <p className="text-blue-100 text-sm">Designed specifically for HP state exams</p>
+                    <p className="text-[#F5F5F5] text-sm">Designed specifically for HP state exams</p>
                   </div>
                 </div>
               </div>
@@ -404,19 +402,19 @@ export default function StudyMaterialPage() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-20 bg-linear-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-20 bg-linear-to-r from-[#0A2342] to-[#1E3A5F] text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to <span className="text-yellow-300">Ace Your Exams</span>?
+            Ready to <span className="text-[#FFD600]">Ace Your Exams</span>?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+          <p className="text-xl text-[#F5F5F5] mb-8 leading-relaxed">
             Download our premium study materials today and take the first step towards 
             your dream government career. Join thousands of successful CPS students.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/e-enrollment" 
-              className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-yellow-200 transition-all duration-300 transform hover:scale-105"
+              className="bg-[#FFD600] text-[#0A2342] px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-[#FFD600]/30 transition-all duration-300 transform hover:scale-105"
             >
               Enroll for Full Access
             </Link>
@@ -431,22 +429,22 @@ export default function StudyMaterialPage() {
       </section>
 
       {/* CONTACT INFO */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#F5F5F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Need Help with Study Materials?</h3>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold text-[#0A2342] mb-8">Need Help with Study Materials?</h3>
+          <p className="text-[#1E3A5F] mb-8 max-w-2xl mx-auto">
             Our faculty is available to guide you on which materials to focus on based on your exam preparation stage.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <HiBookOpen className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Material Guidance</h4>
-              <p className="text-gray-600">Get personalized study material recommendations</p>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-[#F5F5F5]">
+              <HiBookOpen className="w-12 h-12 text-[#0A2342] mx-auto mb-4" />
+              <h4 className="text-lg font-bold text-[#0A2342] mb-2">Material Guidance</h4>
+              <p className="text-[#1E3A5F]">Get personalized study material recommendations</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <HiCloudArrowDown className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Download Support</h4>
-              <p className="text-gray-600">Technical help with accessing and downloading materials</p>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-[#F5F5F5]">
+              <HiCloudArrowDown className="w-12 h-12 text-[#0A2342] mx-auto mb-4" />
+              <h4 className="text-lg font-bold text-[#0A2342] mb-2">Download Support</h4>
+              <p className="text-[#1E3A5F]">Technical help with accessing and downloading materials</p>
             </div>
           </div>
         </div>

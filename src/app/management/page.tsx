@@ -111,20 +111,20 @@ export default function ManagementPage() {
       />
 
       {/* HERO SECTION */}
-      <section className="relative py-20 bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <section className="relative py-20 bg-linear-to-br from-[#0A2342] via-[#1E3A5F] to-[#0A2342] text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Meet Our <span className="text-yellow-300">Expert Team</span>
+            Meet Our <span className="text-[#FFD600]">Expert Team</span>
           </h1>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-[#F5F5F5] mb-8 max-w-3xl mx-auto leading-relaxed">
             Learn from Himachal Pradesh most experienced faculty team dedicated to 
             your success in HPAS, HAS, and government examinations
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
               href="/e-enrollment" 
-              className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-yellow-200 transition-all duration-300 transform hover:scale-105"
+              className="bg-[#FFD600] text-[#0A2342] px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-[#FFD600]/30 transition-all duration-300 transform hover:scale-105"
             >
               Join Our Program
             </Link>
@@ -146,11 +146,11 @@ export default function ManagementPage() {
               const Icon = stat.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-blue-600" />
+                  <div className="w-16 h-16 bg-[#1E3A5F]/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-8 h-8 text-[#0A2342]" />
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                  <div className="text-3xl font-bold text-[#0A2342] mb-2">{stat.number}</div>
+                  <div className="text-[#1E3A5F] font-medium">{stat.label}</div>
                 </div>
               );
             })}
@@ -159,13 +159,13 @@ export default function ManagementPage() {
       </section>
 
       {/* FACULTY GRID */}
-      <section className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
+      <section className="py-20 bg-linear-to-br from-[#F5F5F5] to-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-blue-600">Expert Faculty</span>
+            <h2 className="text-4xl font-bold text-[#0A2342] mb-4">
+              Our <span className="text-[#1E3A5F]">Expert Faculty</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1E3A5F] max-w-3xl mx-auto">
               Meet the dedicated professionals who bring years of experience and proven success in guiding aspirants
             </p>
           </div>
@@ -174,59 +174,58 @@ export default function ManagementPage() {
             {faculty.map((member, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden group"
+                className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-[#F5F5F5] overflow-hidden group"
               >
                 {/* Faculty Image */}
-              <div className="relative h-80 overflow-hidden">
-  <Image 
-    src={member.image}
-    alt={member.name}
-    fill
-    className="object-cover"
-  />
-  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
-  
-  <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-transparent p-6">
-    <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
-    <p className="text-blue-200 font-medium">{member.role}</p>
-  </div>
+                <div className="relative h-80 overflow-hidden">
+                  <Image 
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                  
+                  <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-transparent p-6">
+                    <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
+                    <p className="text-[#F5F5F5] font-medium">{member.role}</p>
+                  </div>
 
-  <div className="absolute top-4 right-4 bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-sm font-bold">
-    {member.experience}
-  </div>
-</div>
-
+                  <div className="absolute top-4 right-4 bg-[#FFD600] text-[#0A2342] px-3 py-1 rounded-full text-sm font-bold">
+                    {member.experience}
+                  </div>
+                </div>
 
                 {/* Faculty Details */}
                 <div className="p-6">
                   <div className="mb-4">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Specialization</h4>
-                    <p className="text-blue-600 font-medium">{member.specialization}</p>
+                    <h4 className="text-lg font-semibold text-[#0A2342] mb-2">Specialization</h4>
+                    <p className="text-[#1E3A5F] font-medium">{member.specialization}</p>
                   </div>
 
                   <div className="mb-4">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Qualifications</h4>
-                    <p className="text-gray-600">{member.qualifications}</p>
+                    <h4 className="text-lg font-semibold text-[#0A2342] mb-2">Qualifications</h4>
+                    <p className="text-[#1E3A5F]">{member.qualifications}</p>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Key Achievements</h4>
+                    <h4 className="text-lg font-semibold text-[#0A2342] mb-2">Key Achievements</h4>
                     <ul className="space-y-2">
                       {member.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex items-center text-gray-600">
-                          <HiStar className="w-4 h-4 text-yellow-500 mr-2 shrink-0" />
+                        <li key={idx} className="flex items-center text-[#1E3A5F]">
+                          <HiStar className="w-4 h-4 text-[#FFD600] mr-2 shrink-0" />
                           {achievement}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="border-t border-gray-200 pt-4">
+                  <div className="border-t border-[#F5F5F5] pt-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-600">Contact:</span>
+                      <span className="text-[#1E3A5F]">Contact:</span>
                       <a 
                         href={`mailto:${member.contact}`}
-                        className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+                        className="text-[#0A2342] hover:text-[#1E3A5F] font-medium flex items-center"
                       >
                         <HiEnvelope className="w-4 h-4 mr-1" />
                         Email
@@ -244,10 +243,10 @@ export default function ManagementPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-blue-600">Core Values</span>
+            <h2 className="text-4xl font-bold text-[#0A2342] mb-4">
+              Our <span className="text-[#1E3A5F]">Core Values</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1E3A5F] max-w-3xl mx-auto">
               The principles that guide our teaching methodology and student approach
             </p>
           </div>
@@ -260,11 +259,11 @@ export default function ManagementPage() {
                   key={index}
                   className="text-center group hover:transform hover:-translate-y-2 transition-all duration-300"
                 >
-                  <div className="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors duration-300">
-                    <Icon className="w-10 h-10 text-blue-600" />
+                  <div className="w-20 h-20 bg-[#1E3A5F]/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#1E3A5F]/20 transition-colors duration-300">
+                    <Icon className="w-10 h-10 text-[#0A2342]" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                  <h3 className="text-2xl font-bold text-[#0A2342] mb-4">{value.title}</h3>
+                  <p className="text-[#1E3A5F] leading-relaxed">{value.description}</p>
                 </div>
               );
             })}
@@ -273,35 +272,35 @@ export default function ManagementPage() {
       </section>
 
       {/* COMMITMENT SECTION */}
-      <section className="py-20 bg-linear-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 bg-linear-to-br from-[#0A2342] to-[#1E3A5F] text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <HiShieldCheck className="w-16 h-16 text-yellow-300 mx-auto mb-6" />
+          <HiShieldCheck className="w-16 h-16 text-[#FFD600] mx-auto mb-6" />
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Commitment to <span className="text-yellow-300">Your Success</span>
+            Our Commitment to <span className="text-[#FFD600]">Your Success</span>
           </h2>
-          <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+          <p className="text-xl text-[#F5F5F5] mb-8 leading-relaxed">
             At The Career Pathway, we ensure that every student receives personalized guidance, 
             structured preparation strategies, and comprehensive support to excel in HPAS, HAS, 
             and other competitive examinations. Our faculty is committed to transforming aspirations 
             into achievements through dedicated mentoring and proven methodologies.
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold mb-4 text-yellow-300">What Sets Us Apart</h3>
+            <h3 className="text-2xl font-bold mb-4 text-[#FFD600]">What Sets Us Apart</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
               <div className="flex items-center">
-                <HiStar className="w-5 h-5 text-yellow-300 mr-3 shrink-0" />
+                <HiStar className="w-5 h-5 text-[#FFD600] mr-3 shrink-0" />
                 <span>Experienced Faculty with Administrative Background</span>
               </div>
               <div className="flex items-center">
-                <HiStar className="w-5 h-5 text-yellow-300 mr-3 shrink-0" />
+                <HiStar className="w-5 h-5 text-[#FFD600] mr-3 shrink-0" />
                 <span>Personalized Mentoring for Each Student</span>
               </div>
               <div className="flex items-center">
-                <HiStar className="w-5 h-5 text-yellow-300 mr-3 shrink-0" />
+                <HiStar className="w-5 h-5 text-[#FFD600] mr-3 shrink-0" />
                 <span>Updated & Relevant Study Material</span>
               </div>
               <div className="flex items-center">
-                <HiStar className="w-5 h-5 text-yellow-300 mr-3 shrink-0" />
+                <HiStar className="w-5 h-5 text-[#FFD600] mr-3 shrink-0" />
                 <span>Regular Performance Tracking & Feedback</span>
               </div>
             </div>
@@ -312,23 +311,23 @@ export default function ManagementPage() {
       {/* CTA SECTION */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to Learn from the <span className="text-blue-600">Best?</span>
+          <h2 className="text-4xl font-bold text-[#0A2342] mb-6">
+            Ready to Learn from the <span className="text-[#1E3A5F]">Best?</span>
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-[#1E3A5F] mb-8 max-w-2xl mx-auto">
             Join CPS today and get mentored by experienced faculty who have helped hundreds 
             of students achieve their dream government careers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/e-enrollment" 
-              className="bg-linear-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-blue-300 transition-all duration-300 transform hover:scale-105"
+              className="bg-linear-to-r from-[#0A2342] to-[#1E3A5F] text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-[#0A2342]/30 transition-all duration-300 transform hover:scale-105"
             >
               Enroll Now
             </Link>
             <Link 
               href="/contact" 
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-50 transition-all duration-300"
+              className="border-2 border-[#0A2342] text-[#0A2342] px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#F5F5F5] transition-all duration-300"
             >
               Meet Our Team
             </Link>
@@ -337,20 +336,20 @@ export default function ManagementPage() {
       </section>
 
       {/* CONTACT INFO */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#F5F5F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Get in Touch with Our Team</h3>
+          <h3 className="text-2xl font-bold text-[#0A2342] mb-8">Get in Touch with Our Team</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center space-x-3 text-gray-700">
-              <HiPhone className="w-6 h-6 text-blue-600" />
+            <div className="flex items-center justify-center space-x-3 text-[#1E3A5F]">
+              <HiPhone className="w-6 h-6 text-[#0A2342]" />
               <span>Institute Helpline</span>
             </div>
-            <div className="flex items-center justify-center space-x-3 text-gray-700">
-              <HiEnvelope className="w-6 h-6 text-blue-600" />
+            <div className="flex items-center justify-center space-x-3 text-[#1E3A5F]">
+              <HiEnvelope className="w-6 h-6 text-[#0A2342]" />
               <span>info@thecareerspathway.com</span>
             </div>
-            <div className="flex items-center justify-center space-x-3 text-gray-700">
-              <HiUserGroup className="w-6 h-6 text-blue-600" />
+            <div className="flex items-center justify-center space-x-3 text-[#1E3A5F]">
+              <HiUserGroup className="w-6 h-6 text-[#0A2342]" />
               <span>Faculty Consultation</span>
             </div>
           </div>

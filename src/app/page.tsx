@@ -159,13 +159,13 @@ const bannerImages = [
 // Banner Slider Component
 function BannerSlider() {
   return (
-    <section className="relative py-16 bg-linear-to-r from-blue-600 to-blue-800">
+    <section className="relative py-16 bg-linear-to-r from-[#0A2342] to-[#1E3A5F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured <span className="text-yellow-300">Programs</span>
+            Featured <span className="text-[#FFD600]">Programs</span>
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-[#F5F5F5] max-w-3xl mx-auto">
             Discover our comprehensive coaching programs designed for your success
           </p>
         </div>
@@ -191,12 +191,12 @@ function BannerSlider() {
                     <h3 className="text-2xl md:text-3xl font-bold mb-2">
                       {banner.title}
                     </h3>
-                    <p className="text-blue-100 text-lg mb-4">
+                    <p className="text-[#F5F5F5] text-lg mb-4">
                       {banner.subtitle}
                     </p>
                     <Link
                       href={banner.ctaLink}
-                      className="inline-flex items-center bg-yellow-400 text-blue-900 px-6 py-3 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105"
+                      className="inline-flex items-center bg-[#FFD600] text-[#0A2342] px-6 py-3 rounded-xl font-bold text-lg hover:bg-[#FFD600]/90 transition-all duration-300 transform hover:scale-105"
                     >
                       {banner.ctaText}
                       <HiChevronRight className="ml-2 w-5 h-5" />
@@ -248,14 +248,14 @@ export default function HomePage() {
       <BannerSlider />
 
       {/* FEATURES SECTION */}
-      <section className="relative py-20 bg-linear-to-br from-blue-50 to-gray-50">
+      <section className="relative py-20 bg-linear-to-br from-[#F5F5F5] to-[#FFFFFF]">
         <div className="absolute inset-0 bg-white/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose <span className="text-blue-600">The Career Pathway</span>?
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A2342] mb-4">
+              Why Choose <span className="text-[#1E3A5F]">The Career Pathway</span>?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1E3A5F] max-w-3xl mx-auto">
               We provide everything you need to crack HPAS, HAS, and other government exams with confidence
             </p>
           </div>
@@ -264,24 +264,24 @@ export default function HomePage() {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               const colorClasses: Record<string, string> = {
-                blue: "text-blue-600 bg-blue-100",
-                green: "text-green-600 bg-green-100",
-                purple: "text-purple-600 bg-purple-100",
-                red: "text-red-600 bg-red-100",
-                orange: "text-orange-600 bg-orange-100",
-                indigo: "text-indigo-600 bg-indigo-100"
+                blue: "text-[#0A2342] bg-[#1E3A5F]/10",
+                green: "text-[#0A2342] bg-[#1E3A5F]/10",
+                purple: "text-[#0A2342] bg-[#1E3A5F]/10",
+                red: "text-[#D62828] bg-[#D62828]/10",
+                orange: "text-[#0A2342] bg-[#FFD600]/20",
+                indigo: "text-[#0A2342] bg-[#1E3A5F]/10"
               };
 
               return (
                 <div 
                   key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-[#F5F5F5]"
                 >
                   <div className={`w-16 h-16 rounded-2xl ${colorClasses[feature.color]} flex items-center justify-center mb-6`}>
                     <Icon className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">{feature.description}</p>
+                  <h3 className="text-2xl font-bold text-[#0A2342] mb-4">{feature.title}</h3>
+                  <p className="text-[#1E3A5F] text-lg leading-relaxed">{feature.description}</p>
                 </div>
               );
             })}
@@ -294,18 +294,18 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+              <div className="inline-block px-4 py-2 bg-[#1E3A5F]/10 text-[#0A2342] rounded-full text-sm font-semibold mb-4">
                 About CPS
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Premier Coaching for <span className="text-blue-600">HPAS & HAS</span> Exams
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0A2342] mb-6">
+                Premier Coaching for <span className="text-[#1E3A5F]">HPAS & HAS</span> Exams
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-lg text-[#1E3A5F] leading-relaxed mb-6">
                 <strong>The Career Pathway (CPS)</strong> is Himachal Pradesh&apos;s most trusted coaching institute 
                 for <strong>HPAS, HAS, Allied Services & other government examinations</strong>. With a legacy 
                 of excellence, we empower aspirants to achieve their dream careers.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              <p className="text-lg text-[#1E3A5F] leading-relaxed mb-8">
                 Our comprehensive approach includes <strong>updated study material, daily job alerts, 
                 modern e&apos;learning modules, expert faculty guidance, and complete exam preparation</strong> 
                 strategies tailored for success.
@@ -314,13 +314,13 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4">
                 <Link 
                   href="/e-enrollment" 
-                  className="bg-linear-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-blue-300 transition-all duration-300 transform hover:scale-105"
+                  className="bg-linear-to-r from-[#0A2342] to-[#1E3A5F] text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-[#0A2342]/30 transition-all duration-300 transform hover:scale-105"
                 >
                   Enroll Now
                 </Link>
                 <Link 
                   href="/about" 
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-50 transition-all duration-300"
+                  className="border-2 border-[#0A2342] text-[#0A2342] px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#F5F5F5] transition-all duration-300"
                 >
                   Learn More
                 </Link>
@@ -328,29 +328,29 @@ export default function HomePage() {
             </div>
             
             <div className="relative">
-              <div className="bg-linear-to-br from-blue-500 to-blue-700 rounded-3xl p-8 text-white">
+              <div className="bg-linear-to-br from-[#0A2342] to-[#1E3A5F] rounded-3xl p-8 text-white">
                 <div className="grid grid-cols-2 gap-6">
                   {stats.map((stat, index) => (
                     <div key={index} className="text-center">
                       <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
-                      <div className="text-blue-100 font-medium">{stat.label}</div>
+                      <div className="text-[#F5F5F5] font-medium">{stat.label}</div>
                     </div>
                   ))}
                 </div>
                 
                 <div className="mt-8 p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
                   <h4 className="text-xl font-bold mb-3">Upcoming Batches</h4>
-                  <ul className="space-y-2 text-blue-100">
+                  <ul className="space-y-2 text-[#F5F5F5]">
                     <li className="flex items-center">
-                      <HiCheckBadge className="w-5 h-5 mr-3 text-green-300" />
+                      <HiCheckBadge className="w-5 h-5 mr-3 text-[#FFD600]" />
                       HPAS Foundation 2025 - Starting Soon
                     </li>
                     <li className="flex items-center">
-                      <HiCheckBadge className="w-5 h-5 mr-3 text-green-300" />
+                      <HiCheckBadge className="w-5 h-5 mr-3 text-[#FFD600]" />
                       HAS Prelims Crash Course - Ongoing
                     </li>
                     <li className="flex items-center">
-                      <HiCheckBadge className="w-5 h-5 mr-3 text-green-300" />
+                      <HiCheckBadge className="w-5 h-5 mr-3 text-[#FFD600]" />
                       Allied Services - New Batch Opening
                     </li>
                   </ul>
@@ -362,13 +362,13 @@ export default function HomePage() {
       </section>
 
       {/* LATEST JOB ALERTS */}
-      <section className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
+      <section className="py-20 bg-linear-to-br from-[#F5F5F5] to-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Latest <span className="text-blue-600">Job Alerts</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A2342] mb-4">
+              Latest <span className="text-[#1E3A5F]">Job Alerts</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1E3A5F] max-w-3xl mx-auto">
               Stay updated with the latest government job notifications and exam dates
             </p>
           </div>
@@ -398,7 +398,7 @@ export default function HomePage() {
           <div className="text-center">
             <Link 
               href="/job-alerts" 
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-200"
+              className="inline-flex items-center bg-white text-[#0A2342] px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-[#F5F5F5]"
             >
               View All Job Alerts
               <HiBellAlert className="ml-3 w-5 h-5" />
@@ -408,19 +408,19 @@ export default function HomePage() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-20 bg-linear-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-20 bg-linear-to-r from-[#0A2342] to-[#1E3A5F] text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Start Your <span className="text-yellow-300">Government Career</span>?
+            Ready to Start Your <span className="text-[#FFD600]">Government Career</span>?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+          <p className="text-xl text-[#F5F5F5] mb-8 leading-relaxed">
             Join hundreds of successful aspirants who achieved their dreams with The Career Pathway. 
             Get expert guidance, comprehensive study material, and personalized mentorship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-[#0A2342] px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Get Free Consultation
             </Link>

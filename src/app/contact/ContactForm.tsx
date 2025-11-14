@@ -132,31 +132,31 @@ export default function ContactForm() {
   };
 
   const colorClasses: Record<ColorKey, string> = {
-    blue: "bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100",
-    green: "bg-green-50 border-green-200 text-green-700 hover:bg-green-100",
-    purple: "bg-purple-50 border-purple-200 text-purple-700 hover:bg-purple-100",
-    orange: "bg-orange-50 border-orange-200 text-orange-700 hover:bg-orange-100"
+    blue: "bg-[#0A2342]/10 border-[#0A2342]/20 text-[#0A2342] hover:bg-[#0A2342]/15",
+    green: "bg-[#1E3A5F]/10 border-[#1E3A5F]/20 text-[#1E3A5F] hover:bg-[#1E3A5F]/15",
+    purple: "bg-[#D62828]/10 border-[#D62828]/20 text-[#D62828] hover:bg-[#D62828]/15",
+    orange: "bg-[#FFD600]/10 border-[#FFD600]/20 text-[#0A2342] hover:bg-[#FFD600]/15"
   };
 
   return (
     <>
       {/* HERO SECTION */}
-            <section className="relative py-20 bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <section className="relative py-20 bg-linear-to-br from-[#0A2342] via-[#1E3A5F] to-[#0A2342] text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Get In <span className="text-yellow-300">Touch</span>
+                Get In <span className="text-[#FFD600]">Touch</span>
               </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl text-[#F5F5F5] mb-8 leading-relaxed">
                 Ready to start your journey with CPS? Contact us for HPAS, HAS coaching admissions, 
                 study material, or any support you need. We're here to help you succeed.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
                   href="#contact-form"
-                  className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-yellow-200 transition-all duration-300 transform hover:scale-105"
+                  className="bg-[#FFD600] text-[#0A2342] px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-[#FFD600]/30 transition-all duration-300 transform hover:scale-105"
                 >
                   Send Message
                 </a>
@@ -169,24 +169,24 @@ export default function ContactForm() {
               </div>
             </div>
             <div className="relative">
-                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 bg-linear-to-br from-blue-600 to-blue-700">
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 bg-linear-to-br from-[#0A2342] to-[#1E3A5F]">
                 <h3 className="text-2xl font-bold mb-6 text-center">Quick Connect</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <HiClock className="w-6 h-6 text-yellow-300" />
-                    <span className="text-blue-100">Response Time: Within 24 Hours</span>
+                    <HiClock className="w-6 h-6 text-[#FFD600]" />
+                    <span className="text-[#F5F5F5]">Response Time: Within 24 Hours</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <HiCheckCircle className="w-6 h-6 text-yellow-300" />
-                    <span className="text-blue-100">Free Career Counseling Available</span>
+                    <HiCheckCircle className="w-6 h-6 text-[#FFD600]" />
+                    <span className="text-[#F5F5F5]">Free Career Counseling Available</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <HiUserGroup className="w-6 h-6 text-yellow-300" />
-                    <span className="text-blue-100">Expert Faculty Support</span>
+                    <HiUserGroup className="w-6 h-6 text-[#FFD600]" />
+                    <span className="text-[#F5F5F5]">Expert Faculty Support</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <HiShieldCheck className="w-6 h-6 text-yellow-300" />
-                    <span className="text-blue-100">100% Privacy Protected</span>
+                    <HiShieldCheck className="w-6 h-6 text-[#FFD600]" />
+                    <span className="text-[#F5F5F5]">100% Privacy Protected</span>
                   </div>
                 </div>
               </div>
@@ -199,10 +199,10 @@ export default function ContactForm() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Multiple Ways to <span className="text-blue-600">Connect</span>
+            <h2 className="text-4xl font-bold text-[#0A2342] mb-4">
+              Multiple Ways to <span className="text-[#1E3A5F]">Connect</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1E3A5F] max-w-3xl mx-auto">
               Choose your preferred method to get in touch with The Career Pathway team
             </p>
           </div>
@@ -230,30 +230,30 @@ export default function ContactForm() {
       </section>
 
       {/* CONTACT FORM & INFO */}
-      <section id="contact-form" className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
+      <section id="contact-form" className="py-20 bg-linear-to-br from-[#F5F5F5] to-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Form */}
-            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-[#F5F5F5]">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                <h2 className="text-3xl font-bold text-[#0A2342] mb-2">
                   Send Us a Message
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-[#1E3A5F]">
                   Fill out the form below and we'll get back to you within 24 hours
                 </p>
               </div>
 
               {/* Inquiry Type Tabs */}
-              <div className="flex space-x-1 bg-gray-100 p-1 rounded-xl mb-6">
+              <div className="flex space-x-1 bg-[#F5F5F5] p-1 rounded-xl mb-6">
                 {["general", "admission", "support", "career"].map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     className={`flex-1 py-3 px-4 rounded-lg text-sm font-semibold transition-all duration-300 ${
                       activeTab === tab
-                        ? 'bg-white text-blue-600 shadow-sm'
-                        : 'text-gray-600 hover:text-blue-600'
+                        ? 'bg-white text-[#0A2342] shadow-sm'
+                        : 'text-[#1E3A5F] hover:text-[#0A2342]'
                     }`}
                   >
                     {tab === 'general' && 'General Inquiry'}
@@ -267,24 +267,24 @@ export default function ContactForm() {
               <form onSubmit={handleContact} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                       Full Name *
                     </label>
                     <input 
                       name="name" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                      className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300"
                       placeholder="Enter your full name"
                       required 
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                       Phone Number *
                     </label>
                     <input
                       name="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                      className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300"
                       placeholder="+91 XXXXX XXXXX"
                       required
                     />
@@ -292,37 +292,37 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                     Email Address *
                   </label>
                   <input
                     name="email"
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300"
                     placeholder="your.email@example.com"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                     Subject *
                   </label>
                   <input
                     name="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300"
                     placeholder="Brief subject of your inquiry"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-[#0A2342] mb-2">
                     Your Message *
                   </label>
                   <textarea
                     name="message"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 border border-[#F5F5F5] rounded-xl focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition-all duration-300 resize-none"
                     placeholder="Please describe your inquiry in detail..."
                     rows={6}
                     required
@@ -332,7 +332,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-linear-to-r from-blue-600 to-blue-700 text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-blue-300 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none group"
+                  className="w-full bg-linear-to-r from-[#0A2342] to-[#1E3A5F] text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-[#0A2342]/30 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none group"
                 >
                   {loading ? (
                     <span className="flex items-center justify-center">
@@ -353,7 +353,7 @@ export default function ContactForm() {
                 {msg && (
                   <div className={`p-4 rounded-xl text-center font-semibold text-lg ${
                     msg.includes("❌") 
-                      ? "bg-red-100 text-red-700 border border-red-200" 
+                      ? "bg-[#D62828]/10 text-[#D62828] border border-[#D62828]/20" 
                       : "bg-green-100 text-green-700 border border-green-200"
                   }`}>
                     {msg}
@@ -365,61 +365,61 @@ export default function ContactForm() {
             {/* Contact Information */}
             <div className="space-y-8">
               {/* Main Contact Info */}
-              <div className="bg-linear-to-br from-blue-600 to-blue-700 rounded-3xl p-8 text-white">
+              <div className="bg-linear-to-br from-[#0A2342] to-[#1E3A5F] rounded-3xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-6 text-center">The Career Pathway</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <HiMapPin className="w-6 h-6 text-yellow-300 mt-1 shrink-0" />
+                    <HiMapPin className="w-6 h-6 text-[#FFD600] mt-1 shrink-0" />
                     <div>
                       <h4 className="font-bold mb-1">Our Location</h4>
-                      <p className="text-blue-100">Shimla, Himachal Pradesh</p>
-                      <p className="text-blue-200 text-sm">Prime location with excellent connectivity</p>
+                      <p className="text-[#F5F5F5]">Shimla, Himachal Pradesh</p>
+                      <p className="text-[#F5F5F5]/70 text-sm">Prime location with excellent connectivity</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <HiPhone className="w-6 h-6 text-yellow-300 mt-1 shrink-0" />
+                    <HiPhone className="w-6 h-6 text-[#FFD600] mt-1 shrink-0" />
                     <div>
                       <h4 className="font-bold mb-1">Phone Number</h4>
-                      <p className="text-blue-100">+91 98000 00000</p>
-                      <p className="text-blue-200 text-sm">Available 9 AM - 7 PM</p>
+                      <p className="text-[#F5F5F5]">+91 98000 00000</p>
+                      <p className="text-[#F5F5F5]/70 text-sm">Available 9 AM - 7 PM</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <HiEnvelope className="w-6 h-6 text-yellow-300 mt-1 shrink-0" />
+                    <HiEnvelope className="w-6 h-6 text-[#FFD600] mt-1 shrink-0" />
                     <div>
                       <h4 className="font-bold mb-1">Email Address</h4>
-                      <p className="text-blue-100">info@thecareerspathway.com</p>
-                      <p className="text-blue-200 text-sm">We reply within 24 hours</p>
+                      <p className="text-[#F5F5F5]">info@thecareerspathway.com</p>
+                      <p className="text-[#F5F5F5]/70 text-sm">We reply within 24 hours</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <HiClock className="w-6 h-6 text-yellow-300 mt-1 shrink-0" />
+                    <HiClock className="w-6 h-6 text-[#FFD600] mt-1 shrink-0" />
                     <div>
                       <h4 className="font-bold mb-1">Working Hours</h4>
-                      <p className="text-blue-100">Monday - Saturday: 9 AM - 7 PM</p>
-                      <p className="text-blue-200 text-sm">Sunday: Closed</p>
+                      <p className="text-[#F5F5F5]">Monday - Saturday: 9 AM - 7 PM</p>
+                      <p className="text-[#F5F5F5]/70 text-sm">Sunday: Closed</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Department Contacts */}
-              <div className="bg-white rounded-3xl shadow-lg p-8 border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Department Contacts</h3>
+              <div className="bg-white rounded-3xl shadow-lg p-8 border border-[#F5F5F5]">
+                <h3 className="text-2xl font-bold text-[#0A2342] mb-6">Department Contacts</h3>
                 <div className="space-y-6">
                   {departments.map((dept, index) => {
                     const Icon = dept.icon;
                     return (
-                      <div key={index} className="flex items-start space-x-4 group hover:bg-gray-50 p-3 rounded-xl transition-colors duration-300">
-                        <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-blue-200 transition-colors duration-300">
-                          <Icon className="w-6 h-6 text-blue-600" />
+                      <div key={index} className="flex items-start space-x-4 group hover:bg-[#F5F5F5] p-3 rounded-xl transition-colors duration-300">
+                        <div className="w-12 h-12 bg-[#1E3A5F]/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-[#1E3A5F]/20 transition-colors duration-300">
+                          <Icon className="w-6 h-6 text-[#0A2342]" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-bold text-gray-900 mb-1">{dept.title}</h4>
-                          <p className="text-gray-600 text-sm mb-2">{dept.description}</p>
+                          <h4 className="font-bold text-[#0A2342] mb-1">{dept.title}</h4>
+                          <p className="text-[#1E3A5F] text-sm mb-2">{dept.description}</p>
                           <a 
                             href={`mailto:${dept.contact}`}
-                            className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                            className="text-[#0A2342] hover:text-[#1E3A5F] text-sm font-medium"
                           >
                             {dept.contact}
                           </a>
@@ -438,34 +438,34 @@ export default function ContactForm() {
       <section id="location" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Visit Our <span className="text-blue-600">Campus</span>
+            <h2 className="text-4xl font-bold text-[#0A2342] mb-4">
+              Visit Our <span className="text-[#1E3A5F]">Campus</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1E3A5F] max-w-3xl mx-auto">
               Come and experience our learning environment at our Shimla center
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-[#F5F5F5]">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {/* Map Placeholder */}
-              <div className="h-96 lg:h-auto bg-linear-to-br from-blue-500 to-blue-600 flex items-center justify-center relative">
+              <div className="h-96 lg:h-auto bg-linear-to-br from-[#0A2342] to-[#1E3A5F] flex items-center justify-center relative">
                 <div className="text-center text-white">
                   <HiMapPin className="w-16 h-16 mx-auto mb-4 opacity-80" />
                   <p className="text-xl font-semibold">CPS Shimla Campus</p>
-                  <p className="text-blue-200 mt-2">Interactive Map Coming Soon</p>
+                  <p className="text-[#F5F5F5] mt-2">Interactive Map Coming Soon</p>
                 </div>
                 {/* Overlay with location details */}
                 <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
                   <div className="flex items-center justify-between text-white">
                     <div>
                       <p className="font-semibold">The Career Pathway</p>
-                      <p className="text-blue-200 text-sm">Shimla, Himachal Pradesh</p>
+                      <p className="text-[#F5F5F5] text-sm">Shimla, Himachal Pradesh</p>
                     </div>
                     <Link 
                       href="https://maps.google.com"
                       target="_blank"
-                      className="bg-white text-blue-600 px-4 py-2 rounded-xl font-semibold text-sm hover:bg-gray-100 transition-colors duration-300"
+                      className="bg-white text-[#0A2342] px-4 py-2 rounded-xl font-semibold text-sm hover:bg-[#F5F5F5] transition-colors duration-300"
                     >
                       Get Directions
                     </Link>
@@ -475,42 +475,42 @@ export default function ContactForm() {
 
               {/* Location Details */}
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Campus Information</h3>
+                <h3 className="text-2xl font-bold text-[#0A2342] mb-6">Campus Information</h3>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">📍 Address</h4>
-                    <p className="text-gray-600">The Career Pathway (CPS)<br />Shimla, Himachal Pradesh<br />India - 171001</p>
+                    <h4 className="font-bold text-[#0A2342] mb-2">📍 Address</h4>
+                    <p className="text-[#1E3A5F]">The Career Pathway (CPS)<br />Shimla, Himachal Pradesh<br />India - 171001</p>
                   </div>
                   
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">🚗 Transportation</h4>
-                    <p className="text-gray-600">Easily accessible by public transport. Ample parking space available for students.</p>
+                    <h4 className="font-bold text-[#0A2342] mb-2">🚗 Transportation</h4>
+                    <p className="text-[#1E3A5F]">Easily accessible by public transport. Ample parking space available for students.</p>
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">🏫 Facilities</h4>
-                    <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                    <h4 className="font-bold text-[#0A2342] mb-2">🏫 Facilities</h4>
+                    <div className="grid grid-cols-2 gap-2 text-sm text-[#1E3A5F]">
                       <div className="flex items-center">
-                        <HiCheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        <HiCheckCircle className="w-4 h-4 text-[#D62828] mr-2" />
                         <span>Modern Classrooms</span>
                       </div>
                       <div className="flex items-center">
-                        <HiCheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        <HiCheckCircle className="w-4 h-4 text-[#D62828] mr-2" />
                         <span>Library</span>
                       </div>
                       <div className="flex items-center">
-                        <HiCheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        <HiCheckCircle className="w-4 h-4 text-[#D62828] mr-2" />
                         <span>Wi-Fi Campus</span>
                       </div>
                       <div className="flex items-center">
-                        <HiCheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        <HiCheckCircle className="w-4 h-4 text-[#D62828] mr-2" />
                         <span>Study Rooms</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-gray-200">
-                    <p className="text-sm text-gray-500">
+                  <div className="pt-4 border-t border-[#F5F5F5]">
+                    <p className="text-sm text-[#1E3A5F]">
                       💡 <strong>Pro Tip:</strong> Schedule a campus visit to experience our learning environment and meet our faculty.
                     </p>
                   </div>
@@ -522,19 +522,19 @@ export default function ContactForm() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-20 bg-linear-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-20 bg-linear-to-r from-[#0A2342] to-[#1E3A5F] text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Start Your <span className="text-yellow-300">Success Journey</span>?
+            Ready to Start Your <span className="text-[#FFD600]">Success Journey</span>?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+          <p className="text-xl text-[#F5F5F5] mb-8 leading-relaxed">
             Don't wait to begin your preparation for HPAS, HAS, and government exams. 
             Contact us today and take the first step towards your dream career.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/e-enrollment" 
-              className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-yellow-200 transition-all duration-300 transform hover:scale-105"
+              className="bg-[#FFD600] text-[#0A2342] px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-[#FFD600]/30 transition-all duration-300 transform hover:scale-105"
             >
               Enroll Now
             </Link>
@@ -549,9 +549,9 @@ export default function ContactForm() {
       </section>
 
       {/* FAQ SECTION */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#F5F5F5]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h3>
+          <h3 className="text-3xl font-bold text-[#0A2342] mb-8 text-center">Frequently Asked Questions</h3>
           <div className="space-y-4">
             {[
               {
@@ -571,9 +571,9 @@ export default function ContactForm() {
                 answer: "Yes, we offer standalone study material packages. You can purchase our E-Books and study resources separately from coaching programs."
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{faq.question}</h4>
-                <p className="text-gray-600">{faq.answer}</p>
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#F5F5F5]">
+                <h4 className="text-lg font-bold text-[#0A2342] mb-2">{faq.question}</h4>
+                <p className="text-[#1E3A5F]">{faq.answer}</p>
               </div>
             ))}
           </div>
