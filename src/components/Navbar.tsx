@@ -81,7 +81,7 @@ export default function Navbar() {
             {/* LOGO */}
             <div className="relative w-12 h-12">
               <Image
-                src="/logo2.png"
+                src="/logo-removebg-preview.png"
                 alt="CPS Logo"
                 width={48}
                 height={48}
